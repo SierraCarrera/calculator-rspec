@@ -1,5 +1,14 @@
 class Calculator
-	def add(num1, num2)
-		num1 + num2
+	def add *numbers
+		numbers.inject(:+)
+	end
+	def sub *numbers
+		numbers.inject(:-)
+	end
+	def mult *numbers
+		numbers.inject(:*)
+	end
+	def divd *numbers
+		numbers.inject(:/)
 	end
 end

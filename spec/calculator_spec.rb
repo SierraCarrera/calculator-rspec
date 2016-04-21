@@ -39,7 +39,7 @@ describe Calculator do
 	describe 'division' do
 		it 'changes answer depending on integer order' do
 			expect(calc.divd(14, 7)).to eq 2
-			expect(calc.divd(7, 14)).to eq .5
+			expect(calc.divd(7, 14)).to eq 0
 		end
 		it 'returns the given number when divided by one' do
 			expect(calc.divd(14, 1)).to eq 14
@@ -48,6 +48,7 @@ describe Calculator do
 			expect(calc.divd(0, 4)).to eq 0
 		end
 		it 'returns an error when it is divided by zero' do
-			expect(calc.divd(4, 0)).to raise_error ZeroDivisionError
+			expect{calc.divd(4, 0)}.to raise_error ZeroDivisionError
 		end
+	end
 end
